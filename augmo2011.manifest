@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# Rev: 20101215_5
+
+# HTML
+index.html
+event/index.html
+event/panelist/index.html
+
+# CSS
+global/css/iOS-reset.css
+global/css/base.css
+
+# JS
+global/js/augm.js
+
+# IMAGE
+global/img/arrow.png
+global/img/chevron.png
+global/img/envelope.png
+global/img/frame.png
+global/img/stripes.png
+global/img/twitter-bird.png

@@ -1,0 +1,6 @@
+AddType text/cache-manifest .manifest
+
+#RewriteEngine on
+#RewriteCond %{HTTP_USER_AGENT} iPhone
+#RewriteCond %{REQUEST_URI} !^/my-iPhone-site/
+#RewriteRule .* /my-iPhone-site/ [R]

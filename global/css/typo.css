@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* =====================================================================
+*
+*    Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+*    Code licensed under the BSD License:
+*    http://developer.yahoo.net/yui/license.txt
+*    version: 2.7.0
+*    
+*    3. YUI Fonts
+*    @module fonts
+*    @namespace yui-
+*    @requires 
+*    
+*     77% = 10px	|	123.1% = 16px	|	167% = 22px	
+*     85% = 11px	|	  131% = 17px	|	174% = 23px
+*     93% = 12px	|	138.5% = 18px	|	182% = 24px
+*    100% = 13px	|	146.5% = 19px	|	189% = 25px
+*    108% = 14px	|	153.9% = 20px	|	197% = 26px
+*    116% = 15px	|	161.6% = 21px	|
+*
+* =================================================================== */
+
+ 
+/**
+ * YUI Fonts
+ * @module fonts
+ * @namespace yui-
+ * @requires 
+ */
+
+/**
+ * Percents could work for IE, but for backCompat purposes, we are using keywords.
+ * x-small is for IE6/7 quirks mode.
+ */
+body {
+	font:13px/1.231 arial,helvetica,clean,sans-serif;
+	/* for IE6/7 */ 
+	*font-size:small; 
+	/* for IE Quirks Mode */
+	*font:x-small; 
+}
+
+/**
+ * Nudge down to get to 13px equivalent for these form elements
+ */ 
+select,
+input,
+button,
+textarea,
+button {
+	font:99% arial,helvetica,clean,sans-serif;
+}
+
+/**
+ * To help tables remember to inherit
+ */
+table {
+	font-size:inherit;
+	font:100%;
+}
+
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre,
+code,
+kbd,
+samp,
+tt {
+	font-family:monospace;
+	*font-size:108%;
+	line-height:100%;
+}
+
+
+/* =====================================================================
+*
+*    4. Basic Font Format
+*
+* =================================================================== */
+
+/* ---------------------------------
+*    Font Family
+*/
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+}
+;;body {
+	font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+}
+*:first-child+html body {
+	font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+}
+* html body {
+	font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+}
+
+
+/* ---------------------------------
+*    Font Size
+*/
+
+.x-large   { font-size: 174%; }
+.large     { font-size: 146.5%; }
+.mid       { font-size: 123.1%; }
+.small     { font-size:  93%; }
+.x-small   { font-size:  77%; letter-spacing: 1px; }
+
+
+/* =====================================================================
+*
+*    5. Basic Hyperlink Format
+*
+* =================================================================== */
+
+/* \*/ a { outline:none; overflow:hidden; } /**/
+/* \*/ a:focus { outline:none; overflow:hidden; } /**/
+
+a         { color: #00BEF3; text-decoration: none; }
+a:visited { color: #00BEF3; text-decoration: none; }
+a:hover   { color: #00BEF3; text-decoration: underline; }
+a:active  { color: #497288; text-decoration: underline; }
+
+a.altText:hover { background-color: transparent; }
+
+
+::-moz-selection{
+	background: #497288;
+	color: #FFF9EF;
+}
+::selection {
+	background: #497288;
+	color: #FFF9EF;
+}
