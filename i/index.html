@@ -1,21 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
-<head manifest="augmo2011.manifest">
-	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<!DOCTYPE html>
+<html lang="ja">
+<head manifest="augmo2011_iPhone.manifest">
+	<meta charset="UTF-8" />
 	<meta name="Author" content="AUGM大分2011実行委員会" />
-	<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no">  
 
 	<title>Apple User Group Meeting in OITA</title>
 	<meta name="omni_page" content="AUGM in OITA 2011 - Index" />
 	<meta name="Keywords" content="AUGM in OITA 2011, Apple User Group Meeting, Apple, Mac, iPhone, iPod, iPad, 大分" />
 	<meta name="Description" content="えがおの真ん中にi" />
 	<link rel="home" href="http://onsenringo.org/" />
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="global/css/base.css" />
+  <script type="text/javascript" src="global/js/augm.js"></script>
   <style>
   </style>
 </head>
 
-<body id="home-page">
+<body id="home-page" onload="hideAddressBar()">
 <div id="wrap">
   <!-- Header -->
   <header>
@@ -51,7 +52,8 @@
           <dt>会場</dt>
             <dd><a href="http://kaikan.oita-shokokai.or.jp/" title="大分県中小企業会館のホームページ">大分県中小企業会館</a>6F大ホール</dd>
             <dd>大分県大分市金池町3丁目1-64</dd>
-            <dd><a href="http://maps.google.com/maps?q=大分県中小企業会館&cid=1862800705407333577" title="マップアプリで地図を表示">地図を表示</a></dd>
+            <dd><a href="http://maps.google.com/maps?q=大分県中小企業会館&cid=1862800705407333577" 
+                    onclick="return confirm('マップソフトが起動します');" title="マップアプリで地図を表示">地図を表示</a></dd>
           <dt>入場</dt>
             <dd>無料 (事前登録制・定員100名)</dd>
         </dl>
