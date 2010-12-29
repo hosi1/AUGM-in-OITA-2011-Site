@@ -10,71 +10,485 @@
 	<meta name="Keywords" content="AUGM in OITA 2011, Apple User Group Meeting, Apple, Mac, iPhone, iPod, iPad, 大分" />
 	<meta name="Description" content="えがおの真ん中にi" />
 	<link rel="home" href="http://onsenringo.org/" />
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <style>
-  </style>
+  <link rel="stylesheet" type="text/css" media="screen" href="comm/css/Style.css" />
 </head>
 
 <body id="home-page">
 <div id="wrap">
   <!-- Header -->
-  <header>
-    <div id="logo">
-      <a id="logo-image" href="#">logo image</a>
+  <div id="header">
+      <div id="logo-image" class="hgroup">
+        <h1>AUGM in OITA 2011 #005</h1>
+        <h2>えがおの真ん中にi</h2>
+      </div><!-- #logo-image.hgroup -->
       <ul id="contact">
         <li id="twitter"><a href="http://mobile.twitter.com/augmoita">Twitter</a></li>
         <li id="e-mail"><a href="mailto:augm@onsenringo.org">E-mail</a></li>
       </ul>
-    </div><!-- /#logo -->
-    <nav id="global-nav">
-      <ul id="nav-menu">
-        <li id="home" class="active glowText"><a href="index.html">home</a></li>
-        <li id="event"><a href="event/index.html">event</a></li>
-        <li id="shortmovie"><a href="shortmovie/index.html">shortmovie</a></li>
-        <li id="about"><a href="about/index.html">about</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- Main Contents -->
+  </div><!-- #header -->
+
   <div id="content">
+  <!-- Main Contents -->
     <div id="main">
-      <section id="event-info">
-        <div id="event-details" class="grBox">
-        <div id="details-wrap">
-        <div id="event-datetime">
-        <h1 id="event-title">AUGM in OITA 2011</h1>
-        <dl>
-          <dt>日時</dt>
-            <dd><time datetime="20110219">2011年2月19日 (土)</time></dd>
-            <dd><time datetime="20110219T1200+0900">12:00</time>開場</dd>
-            <dd><time datetime="20110219T1230+0900">12:30</time>開始 (<time datetime="20110219T1830+0900">18:30</time>終了予定)</dd>
-          <dt>会場</dt>
-            <dd><a href="http://kaikan.oita-shokokai.or.jp/" title="大分県中小企業会館のホームページ">大分県中小企業会館</a>6F大ホール</dd>
-            <dd>大分県大分市金池町3丁目1-64</dd>
-            <dd><a href="http://maps.google.com/maps?q=大分県中小企業会館&cid=1862800705407333577" title="マップアプリで地図を表示">地図を表示</a></dd>
-          <dt>入場</dt>
-            <dd>無料 (事前登録制・定員100名)</dd>
-        </dl>
-        </div><!-- #event-datetime -->
-        <span id="rImg-poster"><img src="help/img/remove-event.png" alt="remove-event" width="120" height="180" /></span>
-        <div style="clear:both;"></div>
-        </div><!-- /#details-wrap -->
-        </div><!-- /#event-details -->
-        <div id="event-procedure">
+    
+    <div id="info-group">
+      <div id="event" class="section">
+        <div id="event-info" class="grBox">
+          <div id="details-wrap">
+            <h1 id="event-title">AUGM in OITA 2011</h1>
+            <dl id="event-details">
+              <dt>日時</dt>
+                <dd><time datetime="20110219">2011年2月19日 (土)</time></dd>
+                <dd><time datetime="20110219T1200+0900">12:00</time>開場</dd>
+                <dd><time datetime="20110219T1230+0900">12:30</time>開始 (<time datetime="20110219T1830+0900">18:30</time>終了予定)</dd>
+              <dt>会場</dt>
+                <dd><a href="http://kaikan.oita-shokokai.or.jp/" title="大分県中小企業会館のホームページ">大分県中小企業会館</a> 6F大ホール</dd>
+                <dd>大分県大分市金池町3丁目1-64</dd>
+                <dd><a href="http://maps.google.com/maps?q=大分県中小企業会館&cid=1862800705407333577" 
+                        onclick="return confirm('マップソフトが起動します');" title="マップアプリで地図を表示">地図を表示</a></dd>
+              <dt>入場</dt>
+                <dd>無料 (事前登録制・定員100名)</dd>
+            </dl>
+          </div><!-- #details-wrap -->
+        </div><!-- #event-info.grBox -->
         <ul class="rList">
-          <li id="event-calendar">
-          <div id="add-calendar"><a href="webcal://appling.sakura.ne.jp/Sites/augmo2011/event/event.ics">イベントをカレンダーに追加</a></div>
-          <div id="remove-calendar"><a class="warning" href="help/index.html" title="イベントをカレンダーから削除">削除</a></div>
-          <div style="clear:both;"></div></li>
-          <li class="listArrow"><a id="entry" href="entry/index.html">事前参加登録申込</a></li>
+          <li id="event-calendar" class="listArrow"><a href="webcal://appling.sakura.ne.jp/Sites/augmo2011/i/event/event.ics">イベントをカレンダーに追加</a></li>
+          <!-- 受付終了時には「finish」class属性値を加え、href属性を削除するか「#」href属性値に置き換えてください -->
+          <li class="listArrow finish"><a id="entry-button" href="entry/index.html">事前参加登録申込</a></li>
         </ul>
-        </div><!-- #event-procedure -->
-      </section>
+      </div><!-- #event.section -->
+
+
+      <div id="social" class="section">
+        <div class="grBox">
+          <h1 class="social-title content-title">懇親会のご案内</h1>
+        </div>
+        <div id="social-info" class="rBox">
+          <p>AUGM in OITA 2010 懇親会 (二次会) を予定しています。各地のユーザーならびに、ゲストの方々と交流を深めるまたとない機会です。</p>
+          <p>なお、これまでに行われた懇親会の模様を<a href="../../about/index.html#photo-report">フォトレポート</a>からご覧いただけます。</p>
+          <dl id="social-details">
+            <dt>日時</dt>
+              <dd>2010年2月20日(土) 20:00から</dd>
+            <dt>会場</dt>
+              <dd>大分市中心部。<br />参加者には当日ご案内いたします。</dd>
+            <dt>会費</dt>
+              <dd>4,000円</dd>
+              <dd>会費は当日受付にてお支払いください。</dd>
+            <dt>参加</dt>
+              <dd>事前参加登録の際にお申し込みください。</dd>
+          </dl>
+        </div><!-- #social-info.rBox -->
+      </div><!-- #social.section -->
+
+
+      <div id="shortmovie" class="section">
+        <div class="grBox">
+          <h1 class="shortmovie-title content-title">九州ユーザーグループ対抗<br />ショートムービーフェスティバル</h1>
+        </div>
+        <div id="shortmovie-info" class="rBox">
+          <p>九州内各ユーザーグループが制作したショートムービー作品を持ち寄ってイベント当日に上映を行い、参加ゲストの投票でショートムービー大賞を決める企画です。</p>
+        </div>
+        <ul class="rList">
+          <li class="listArrow"><a>結果発表</a></li>
+        </ul>
+      </div><!-- #shortmovie -->
+    
+      <div id="profit" class="section">
+        <div class="grBox">
+        <h1 class="section-title">お得な情報</h1>
+        </div>
+        <div class="rBox">
+          <p>商品のお得情報や当日販売する商品の説明を入れてみるといいかも</p>
+        </div>
+      </div><!-- #profit.section -->
+    
+    </div><!-- #info-group -->
+
+    
+    <div id="list-group">
+    
+    
+      <div id="guest" class="section">
+        <div id="guest-title" class="grBox">
+          <h1 class="section-title">参加ゲスト</h1>
+        </div>
+        <ul class="rList">
+          <li class="listArrow">
+            <a id="lix-adobe" href="http://www.adobe.com/jp/">
+            <span class="thumb"><img src="guest-icons/lix-adobe.jpg" alt="アドビシステムズのサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>アドビシステムズ株式会社</em>
+                「Creative Suite シリーズ」を中心としたグラフィックソフトウェア製品などの紹介</span></a></li>
+          <li class="listArrow">
+            <a id="lix-nobi" href="http://nobi.com/">
+            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>林信行氏</em>
+                ITジャーナリストとして国内外で活躍される 林信行氏 による特別講演</span></a></li>
+          <li class="listArrow">
+            <a id="lix-trinity" href="http://www.trinity.jp/">
+            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>トリニティ株式会社</em>
+                iPhone/iPod関連アクセサリ類の紹介</span></a></li>
+          <li class="listArrow">
+            <a id="lix-focal" href="http://www.focal.co.jp/">
+            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>フォーカルポイントコンピュータ株式会社</em>
+                iPhone/iPod関連アクセサリ類の紹介</span></a></li>
+          <li class="listArrow">
+            <a id="lix-microsoft" href="http://www.microsoft.com/japan/mac/">
+            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>マイクロソフト株式会社</em>
+                Office for Macなどのソフトやハードウェアの紹介</span></a></li>
+          <li class="listArrow">
+            <a id="lix-yahoo" href="http://www.yahoo.co.jp/">
+            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>ヤフー株式会社</em>
+                検索サービスなどの紹介</span></a></li>
+          <li class="listArrow">
+            <a id="lix-saika" href="http://mono-logue.air-nifty.com/monolog/">
+            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="guest-body">
+              <em>斎賀和彦氏</em>
+                デジタル一眼でムービーを撮影、編集し、配信するまでを紹介</span></a></li>
+        </ul>
+      </div><!-- #guest -->
+      
+      
+      <div id="usergroups" class="section">
+        <div id="usergroups-title" class="grBox">
+          <h1 class="content-title">参加ユーザーグループ</h1>
+        </div>
+        <ul class="rList last">
+          <li class="listArrow"><a href="http://www.onsenringo.org/">OITA Apple User Group 温泉りんご</a></li>
+          <li class="listArrow"><a href="http://homepage.mac.com/mitoriesan/Menu4.html">Welcome to Macintosh.</a></li>
+          <li class="listArrow"><a href="http://homepage.mac.com/tokudome/kagomug/">かごしまMacユーザーグループ</a></li>
+          <li class="listArrow"><a href="http://kita9mug.sitemix.jp/">北九州マックユーザーズグループ</a></li>
+          <li class="listArrow"><a href="http://homepage.mac.com/shinbone/maccafe/">熊本MacCafe</a></li>
+          <li class="listArrow"><a href="http://dai1.com/aug/Nagasaki/Welcome.html">長崎アップルユーザグループ</a></li>
+          <li class="listArrow"><a href="http://www.miyazakiappleclub.com/">Miyazaki Apple Club</a></li>
+          <li class="listArrow"><a href="http://www.fm-kyushu.jp/">ファイルメーカーPro 九州ユーザーズミーティング</a></li>
+          <li class="listArrow"><a href="http://www.tcp-net.ad.jp/danbo/">MACお宝鑑定団</a></li>
+        </ul>        
+      </div><!-- #usergroups -->
+
+
+      <div id="supporter-list" class="section">
+        <div class="grBox">
+          <h1 class="supporter-title content-title">協賛および後援</h1>
+        </div>
+        <ul class="rList">
+          <li class="listArrow"><a>有限会社青い空 マックメモリー専門店マックメム</a></li>
+        </ul>
+      </div><!-- #supporter-list -->
+    
+    
+    </div><!-- #list-group -->
+
+
     </div><!-- #main -->
+    
+  <!-- Side Contents -->
+    <div id="side">
+    
+      <div id="sidea">
+        <img src="comm/img/augmo2011-poster.png" alt="augmo2011-poster" width="215" height="304" />
+      </div><!-- #sidea -->
+      
+      <div id="sideb">
+
+        <div id="about" class="section">
+          <div class="grBox">
+            <h1 class="about-augm-title content-title">AUGM について</h1>
+          </div>
+          <div id="about-augm" class="rBox">
+            <p>AUGMとは、Apple User Group Meetingの略で、アップルジャパン株式会社後援のもと、各地のユーザーが主体となって開催するアップル関係のイベントです。アップル関連製品を取り扱っているベンダー各社によるデモンストレーション、 ユーザーグループによる活動報告などが主な内容となります。<br />AUGM in OITA 2011 は、OITA Apple User Group「温泉りんご」のメンバーにより構成された「AUGM大分2011実行委員会」が主催しています。</p>
+          </div>
+        </div><!-- #about -->
+        
+      </div><!-- #sideb -->
+      
+      <div id="sidec">
+        
+        <div id="photo-report" class="section">
+          <div class="grBox">
+            <h1 class="content-title">フォトレポート</h1>
+          </div>
+          <ul id="photo-report-list" class="rList last">
+            <li class="listArrow"><a>2010年</a></li>
+            <li class="listArrow"><a>2009年</a></li>
+            <li class="listArrow"><a>2008年</a></li>
+            <li class="listArrow"><a>2007年</a></li>
+          </ul>
+        </div><!-- #photo-report -->
+      </div>
+    </div><!-- #side -->
   </div><!-- #content -->
-  <footer>
-    <p class="copyright">&#169; 2011 AUGM大分2011実行委員会</p>
-  </footer>
-  </div><!-- #wrap -->
+  <div id="footer">
+    <p class="copyright">Copyright 2011 AUGM大分2011実行委員会</p>
+  </div><!-- #footer -->
+
+
+      <div id="entry-form" class="section" style="display:none;">
+<form title="AUGM in OITA 2010 Regist" class="panel" method="post" action="/sys-html/cgi-bin/formwiz.cgi">
+<input type="hidden" name="formid" value="S1F@g9MJygsAAN4FGks003" />
+<input type="hidden" name="action" value="confirm" />
+  <ul id="entry-info" class="section">
+    <li class="header">
+      <span>
+        <h1 class="content-title">申込事項</h1>
+        <small>「<span class="star-mark">＊</span>」は必須項目</small>
+      </span>
+    </li><!-- .header -->
+    <li>
+      <span>
+        <label for="contents0">名前<span class="star-mark">＊</span></label>
+        <input type="text" id="contents0" name="contents0" value="" placeholder="大分 太郎" />
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents1">ふりがな<span class="star-mark">＊</span></label>
+        <input type="text" id="contents1" name="contents1" value="" placeholder="おおいた たろう" />
+      </span>
+    </li>
+    <li>
+      <span>
+        <label>Email<span class="star-mark">＊</span></label>
+        <input type="email" id="contents2" name="contents2" value="" placeholder="email@example.com" />
+      </span>
+    </li>
+    <li>
+      <span>
+        <label>確認用<span class="star-mark">＊</span></label>
+        <input type="email" id="contents2" name="contents2" value="" placeholder="email@example.com" />
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents3">所属グループ</label>
+        <input type="text" id="contents3" name="contents3" value="" placeholder="所属していなければ空欄" />
+      </span>
+      <span class="note">所属するユーザーグループ名をご記入ください。所属するユーザーグループがなければ空欄のまま。</span>
+    </li>
+    <li>
+      <span>
+        <label for="contents4">ハンドル名</label>
+        <input type="text" id="contents4" name="contents4" value="" placeholder="ネット上のニックネーム" />
+      </span>
+      <span class="note">当日、名札にハンドル名が表示されます。未記入の場合、名札には「お名前」が表示されます。</span>
+    </li>
+    <li>
+      <span>
+        <label>懇親会(二次会)<span class="star-mark">＊</span></label>
+        <div class="radio button">
+          <label><input type="radio" id="contents5" name="contents5" value="参加" /> 参加</label>
+          <label><input type="radio" id="contents5" name="contents5" value="不参加" checked="checked" /> 不参加</label>
+        </div>
+      </span>
+      <span class="note">参加される方は、会費4,000円を当日受付にてお支払いください。</span>
+    </li>
+    <li class="bottom"></li>
+  </ul><!-- #entry-info -->
+
+  <ul id="evaluation-form" class="section">
+    <li class="header">
+      <span>
+        <h1 class="content-title">アンケート</h1>
+      </span>
+    </li>
+    <li class="clr">
+      <span>
+        <label>性別<span class="star-mark">＊</span></label>
+        <div class="radio button">
+          <label><input type="radio" id="contents6" name="contents6" value="男性" /> 男性</label>
+          <label><input type="radio" id="contents6" name="contents6" value="女性" /> 女性</label>
+        </div>
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents7">年齢<span class="star-mark">＊</span></label>
+        <select id="contents7" name="contents7">
+          <option value="">選択してください</option>
+          <option value="10歳未満">10歳未満</option>
+          <option value="10〜19歳">10〜19歳</option>
+          <option value="20〜29歳">20〜29歳</option>
+          <option value="30〜39歳">30〜39歳</option>
+          <option value="40〜49歳">40〜49歳</option>
+          <option value="50〜59歳">50〜59歳</option>
+          <option value="60〜69歳">60〜69歳</option>
+          <option value="70歳以上">70歳以上</option>
+        </select>
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents8">お住まい<span class="star-mark">＊</span></label>
+        <select id="contents8" name="contents8">
+          <option value="">選択してください</option>
+          <option value="大分市">大分市</option>
+          <option value="別府市">別府市</option>
+          <option value="中津市">中津市</option>
+          <option value="日田市">日田市</option>
+          <option value="佐伯市">佐伯市</option>
+          <option value="臼杵市">臼杵市</option>
+          <option value="津久見市">津久見市</option>
+          <option value="竹田市">竹田市</option>
+          <option value="豊後高田市">豊後高田市</option>
+          <option value="杵築市">杵築市</option>
+          <option value="宇佐市">宇佐市</option>
+          <option value="豊後大野市">豊後大野市</option>
+          <option value="由布市">由布市</option>
+          <option value="国東市">国東市</option>
+          <option value="姫島村">姫島村</option>
+          <option value="日出町">日出町</option>
+          <option value="九重町">九重町</option>
+          <option value="玖珠町">玖珠町</option>
+          <option value="-">----------</option>
+          <option value="福岡県">福岡県</option>
+          <option value="佐賀県">佐賀県</option>
+          <option value="長崎県">長崎県</option>
+          <option value="熊本県">熊本県</option>
+          <option value="宮崎県">宮崎県</option>
+          <option value="鹿児島県">鹿児島県</option>
+          <option value="沖縄県">沖縄県</option>
+          <option value="-">----------</option>
+          <option value="北海道">北海道</option>
+          <option value="青森県">青森県</option>
+          <option value="岩手県">岩手県</option>
+          <option value="宮城県">宮城県</option>
+          <option value="秋田県">秋田県</option>
+          <option value="山形県">山形県</option>
+          <option value="福島県">福島県</option>
+          <option value="茨城県">茨城県</option>
+          <option value="栃木県">栃木県</option>
+          <option value="群馬県">群馬県</option>
+          <option value="埼玉県">埼玉県</option>
+          <option value="千葉県">千葉県</option>
+          <option value="東京都">東京都</option>
+          <option value="神奈川県">神奈川県</option>
+          <option value="新潟県">新潟県</option>
+          <option value="富山県">富山県</option>
+          <option value="石川県">石川県</option>
+          <option value="福井県">福井県</option>
+          <option value="山梨県">山梨県</option>
+          <option value="長野県">長野県</option>
+          <option value="岐阜県">岐阜県</option>
+          <option value="静岡県">静岡県</option>
+          <option value="愛知県">愛知県</option>
+          <option value="滋賀県">滋賀県</option>
+          <option value="三重県">三重県</option>
+          <option value="京都府">京都府</option>
+          <option value="大阪府">大阪府</option>
+          <option value="兵庫県">兵庫県</option>
+          <option value="奈良県">奈良県</option>
+          <option value="和歌山県">和歌山県</option>
+          <option value="鳥取県">鳥取県</option>
+          <option value="島根県">島根県</option>
+          <option value="岡山県">岡山県</option>
+          <option value="広島県">広島県</option>
+          <option value="山口県">山口県</option>
+          <option value="徳島県">徳島県</option>
+          <option value="香川県">香川県</option>
+          <option value="愛媛県">愛媛県</option>
+          <option value="高知県">高知県</option>
+          <option value="-">----------</option>
+          <option value="海外">海外</option>
+          <option value="その他">その他</option>
+        </select>
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents9">職業<span class="star-mark">＊</span></label>
+        <select id="contents9" name="contents9">
+          <option value="">選択してください</option>
+          <option value="IT関係">IT関係</option>
+          <option value="事務系">事務系</option>
+          <option value="技術系">技術系</option>
+          <option value="営業・企画系">営業・企画系</option>
+          <option value="クリエーター系">クリエーター系</option>
+          <option value="販売系">販売系</option>
+          <option value="サービス業">サービス業</option>
+          <option value="出版・印刷系">出版・印刷系</option>
+          <option value="役員・管理職">役員・管理職</option>
+          <option value="専門職">専門職</option>
+          <option value="公務員">公務員</option>
+          <option value="教員">教員</option>
+          <option value="自営業">自営業</option>
+          <option value="アーティスト">アーティスト</option>
+          <option value="フリーター">フリーター</option>
+          <option value="学生">学生</option>
+          <option value="主婦">主婦</option>
+          <option value="その他">その他</option>
+        </select>
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents10">Mac歴<span class="star-mark">＊</span></label>
+        <input type="text" id="contents10" name="contents10" placeholder="使用年数(半角数字)" />
+      </span>
+      <span class="note">Macをお使いでない方は「-（半角マイナス記号）」とご記入ください。</span>
+    </li>
+    <li class="clr">
+      <span>
+      <label for="contents11">AUGM大分を何で知りましたか？<span class="star-mark">＊</span></label>
+      <div id="reason">
+        <select id="contents11" name="contents11">
+          <option value="">選択してください</option>
+          <option value="ポスターを見て">ポスターを見て</option>
+          <option value="友人・知人から">友人・知人から</option>
+          <option value="AUGM in OITAのWebサイト">AUGM大分のサイト</option>
+          <option value="Twitter">Twitter</option>
+          <option value="その他Webサイト">その他Webサイト</option>
+          <option value="その他">その他</option>
+        </select>
+        <input type="text" id="contents12" name="contents12" placeholder="その他の方は具体的に" />
+      </div>
+      </span>
+    </li>
+    <li>
+      <span>
+        <label>参加履歴<span class="star-mark">＊</span></label>
+        <div class="history checkbox">
+          <label><input type="checkbox" id="contents13" name="contents13" value="第1回" /> 第1回(2007年)に参加</label>
+          <label><input type="checkbox" id="contents13" name="contents13" value="第2回" /> 第2回(2008年)に参加</label>
+          <label><input type="checkbox" id="contents13" name="contents13" value="第3回" /> 第3回(2009年)に参加</label>
+          <label><input type="checkbox" id="contents13" name="contents13" value="第4回" /> 第4回(2010年)に参加</label>
+          <label><input type="checkbox" id="contents13" name="contents13" value="初参加" /> 今回(2011年)が初参加</label>
+        </div><!-- .history -->
+      </span>
+    </li>
+    <li>
+      <span>
+        <label for="contents14">コメント</label>
+        <textarea id="contents14" name="contents14" class="textarea" cols="" rows=""></textarea>
+      </span>
+    </li>
+    <li>
+      <span>
+        <label>お知らせ<span class="star-mark">＊</span></label>
+        <div class="radio button">
+          <label><input type="radio" id="contents15" name="contents15" value="はい" /> はい</label>
+          <label><input type="radio" id="contents15" name="contents15" value="いいえ" checked="checked" /> いいえ</label>
+        </div>
+      </span>
+      <span class="note">次回以降のAUGM大分の開催をメールでお知らせしてもいいですか？（メールアドレスは、AUGM大分のお知らせ以外の目的に使用することはありません）</span>
+    </li>
+    <li class="bottom"></li>
+  </ul>
+  <fieldset class="button-field">
+    <button class="submitButton" type="submit" value="内容を確認">内容を確認</button>
+    <button class="resetButton" type="reset" value="リセット">リセット</button>
+  </fieldset>
+</form>
+      </div><!-- #entry-form -->
+</div><!-- #wrap -->
 </body>
 </html>
