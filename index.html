@@ -10,7 +10,11 @@
 	<meta name="Keywords" content="AUGM in OITA 2011, Apple User Group Meeting, Apple, Mac, iPhone, iPod, iPad, 大分" />
 	<meta name="Description" content="えがおの真ん中にi" />
 	<link rel="home" href="http://onsenringo.org/" />
-  <link rel="stylesheet" type="text/css" media="screen" href="comm/css/Style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="global/css/Style.css" />
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">google.load("jquery", "1.4");</script>
+  <script type="text/javascript" src="global/js/jquery.lightbox_me.js"></script>
+  <script type="text/javascript" src="global/js/augmo2011.js"></script>
 </head>
 
 <body id="home-page">
@@ -18,8 +22,8 @@
   <!-- Header -->
   <div id="header">
       <div id="logo-image" class="hgroup">
-        <h1>AUGM in OITA 2011 #005</h1>
-        <h2>えがおの真ん中にi</h2>
+        <h1 id="logo-title">AUGM in OITA 2011 #005</h1>
+        <h2 id="logo-theme">えがおの真ん中にi</h2>
       </div><!-- #logo-image.hgroup -->
       <ul id="contact">
         <li id="twitter"><a href="http://mobile.twitter.com/augmoita">Twitter</a></li>
@@ -52,20 +56,20 @@
           </div><!-- #details-wrap -->
         </div><!-- #event-info.grBox -->
         <ul class="rList">
-          <li id="event-calendar" class="listArrow"><a href="webcal://appling.sakura.ne.jp/Sites/augmo2011/i/event/event.ics">イベントをカレンダーに追加</a></li>
+          <li id="event-calendar" class="listArrow"><a href="webcal://appling.sakura.ne.jp/Sites/augmo2011/global/event.ics">イベントをカレンダーに追加</a></li>
           <!-- 受付終了時には「finish」class属性値を加え、href属性を削除するか「#」href属性値に置き換えてください -->
-          <li class="listArrow finish"><a id="entry-button" href="entry/index.html">事前参加登録申込</a></li>
+          <li class="listArrow finish"><a id="entry-button" href="#">事前参加登録申込</a></li>
         </ul>
       </div><!-- #event.section -->
 
 
       <div id="social" class="section">
         <div class="grBox">
-          <h1 class="social-title content-title">懇親会のご案内</h1>
+          <h1 class="social-title section-title">懇親会のご案内</h1>
         </div>
         <div id="social-info" class="rBox">
           <p>AUGM in OITA 2010 懇親会 (二次会) を予定しています。各地のユーザーならびに、ゲストの方々と交流を深めるまたとない機会です。</p>
-          <p>なお、これまでに行われた懇親会の模様を<a href="../../about/index.html#photo-report">フォトレポート</a>からご覧いただけます。</p>
+          <p>なお、これまでに行われた懇親会の模様を<a href="#photo-report">フォトレポート</a>からご覧いただけます。</p>
           <dl id="social-details">
             <dt>日時</dt>
               <dd>2010年2月20日(土) 20:00から</dd>
@@ -83,7 +87,7 @@
 
       <div id="shortmovie" class="section">
         <div class="grBox">
-          <h1 class="shortmovie-title content-title">九州ユーザーグループ対抗<br />ショートムービーフェスティバル</h1>
+          <h1 class="shortmovie-title section-title">九州ユーザーグループ対抗<br />ショートムービーフェスティバル</h1>
         </div>
         <div id="shortmovie-info" class="rBox">
           <p>九州内各ユーザーグループが制作したショートムービー作品を持ち寄ってイベント当日に上映を行い、参加ゲストの投票でショートムービー大賞を決める企画です。</p>
@@ -115,43 +119,43 @@
         <ul class="rList">
           <li class="listArrow">
             <a id="lix-adobe" href="http://www.adobe.com/jp/">
-            <span class="thumb"><img src="guest-icons/lix-adobe.jpg" alt="アドビシステムズのサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-adobe.png" alt="アドビシステムズのサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>アドビシステムズ株式会社</em>
                 「Creative Suite シリーズ」を中心としたグラフィックソフトウェア製品などの紹介</span></a></li>
           <li class="listArrow">
             <a id="lix-nobi" href="http://nobi.com/">
-            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-nobi.png" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>林信行氏</em>
                 ITジャーナリストとして国内外で活躍される 林信行氏 による特別講演</span></a></li>
           <li class="listArrow">
             <a id="lix-trinity" href="http://www.trinity.jp/">
-            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-trinity.png" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>トリニティ株式会社</em>
                 iPhone/iPod関連アクセサリ類の紹介</span></a></li>
           <li class="listArrow">
             <a id="lix-focal" href="http://www.focal.co.jp/">
-            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-focal.png" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>フォーカルポイントコンピュータ株式会社</em>
                 iPhone/iPod関連アクセサリ類の紹介</span></a></li>
           <li class="listArrow">
             <a id="lix-microsoft" href="http://www.microsoft.com/japan/mac/">
-            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-microsoft.png" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>マイクロソフト株式会社</em>
                 Office for Macなどのソフトやハードウェアの紹介</span></a></li>
           <li class="listArrow">
             <a id="lix-yahoo" href="http://www.yahoo.co.jp/">
-            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-yahoo.png" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>ヤフー株式会社</em>
                 検索サービスなどの紹介</span></a></li>
           <li class="listArrow">
             <a id="lix-saika" href="http://mono-logue.air-nifty.com/monolog/">
-            <span class="thumb"><img src="guest-icons/lix-nobi.jpg" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
+            <span class="thumb"><img src="global/guest-icons/lix-saika.png" alt="林信幸氏のサムネイル" width="32" height="32"/></span>
             <span class="guest-body">
               <em>斎賀和彦氏</em>
                 デジタル一眼でムービーを撮影、編集し、配信するまでを紹介</span></a></li>
@@ -161,7 +165,7 @@
       
       <div id="usergroups" class="section">
         <div id="usergroups-title" class="grBox">
-          <h1 class="content-title">参加ユーザーグループ</h1>
+          <h1 class="section-title">参加ユーザーグループ</h1>
         </div>
         <ul class="rList last">
           <li class="listArrow"><a href="http://www.onsenringo.org/">OITA Apple User Group 温泉りんご</a></li>
@@ -179,7 +183,7 @@
 
       <div id="supporter-list" class="section">
         <div class="grBox">
-          <h1 class="supporter-title content-title">協賛および後援</h1>
+          <h1 class="supporter-title section-title">協賛および後援</h1>
         </div>
         <ul class="rList">
           <li class="listArrow"><a>有限会社青い空 マックメモリー専門店マックメム</a></li>
@@ -196,14 +200,14 @@
     <div id="side">
     
       <div id="sidea">
-        <img src="comm/img/augmo2011-poster.png" alt="augmo2011-poster" width="215" height="304" />
+        <img src="global/img/augmo2011-poster.png" alt="augmo2011-poster" width="215" height="304" />
       </div><!-- #sidea -->
       
       <div id="sideb">
 
         <div id="about" class="section">
           <div class="grBox">
-            <h1 class="about-augm-title content-title">AUGM について</h1>
+            <h1 class="about-augm-title section-title">AUGM について</h1>
           </div>
           <div id="about-augm" class="rBox">
             <p>AUGMとは、Apple User Group Meetingの略で、アップルジャパン株式会社後援のもと、各地のユーザーが主体となって開催するアップル関係のイベントです。アップル関連製品を取り扱っているベンダー各社によるデモンストレーション、 ユーザーグループによる活動報告などが主な内容となります。<br />AUGM in OITA 2011 は、OITA Apple User Group「温泉りんご」のメンバーにより構成された「AUGM大分2011実行委員会」が主催しています。</p>
@@ -216,7 +220,7 @@
         
         <div id="photo-report" class="section">
           <div class="grBox">
-            <h1 class="content-title">フォトレポート</h1>
+            <h1 class="section-title">フォトレポート</h1>
           </div>
           <ul id="photo-report-list" class="rList last">
             <li class="listArrow"><a>2010年</a></li>
@@ -227,20 +231,17 @@
         </div><!-- #photo-report -->
       </div>
     </div><!-- #side -->
-  </div><!-- #content -->
-  <div id="footer">
-    <p class="copyright">Copyright 2011 AUGM大分2011実行委員会</p>
-  </div><!-- #footer -->
 
 
-      <div id="entry-form" class="section" style="display:none;">
+      <div id="entry-form" class="section">
 <form title="AUGM in OITA 2010 Regist" class="panel" method="post" action="/sys-html/cgi-bin/formwiz.cgi">
 <input type="hidden" name="formid" value="S1F@g9MJygsAAN4FGks003" />
 <input type="hidden" name="action" value="confirm" />
+<span id="close_x" class="close sprited"></span>
   <ul id="entry-info" class="section">
     <li class="header">
       <span>
-        <h1 class="content-title">申込事項</h1>
+        <h1 class="section-title">申込事項</h1>
         <small>「<span class="star-mark">＊</span>」は必須項目</small>
       </span>
     </li><!-- .header -->
@@ -298,7 +299,7 @@
   <ul id="evaluation-form" class="section">
     <li class="header">
       <span>
-        <h1 class="content-title">アンケート</h1>
+        <h1 class="section-title">アンケート</h1>
       </span>
     </li>
     <li class="clr">
@@ -489,6 +490,12 @@
   </fieldset>
 </form>
       </div><!-- #entry-form -->
+
+
+  </div><!-- #content -->
+  <div id="footer">
+    <p class="copyright">Copyright 2011 AUGM大分2011実行委員会</p>
+  </div><!-- #footer -->
 </div><!-- #wrap -->
 </body>
 </html>

@@ -50,6 +50,10 @@ footer
   width: 480px;
 }
 
+/* section bottom none */
+#main > section {margin-bottom: 20px;}
+#main > section:last-child {margin-bottom: 0 !important;}
+
 
 
 /* decoration style */
@@ -93,10 +97,6 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 * html .clr             { zoom: 1; } /* IE6 */
 *:first-child+html .clr { zoom: 1; } /* IE7 */
 
-/* section bottom none */
-#main > section {margin-bottom: 20px;}
-#main > section:last-child {margin-bottom: 0 !important;}
-
 /* Box style */
 .rBox
 {
@@ -134,7 +134,7 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 {
   position: relative;
   border-top: 1px solid #ababab;
-  padding: 10px;
+  padding: 10px 25px 10px 10px;
 }
 .rList li:first-child
 {
@@ -158,7 +158,7 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
   padding: 8px;
   margin: -8px;
 }
-.grBox + .rList
+.grBox + .rList, .grBox + .rList li:first-child
 {
   border-top: 0;
   -webkit-border-top-left-radius: 0;
@@ -167,7 +167,6 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 
 .listArrow
 {
-  padding-right: 25px !important;
   background: url(../img/hi-arrow.png) no-repeat right center;
   -webkit-background-size: 18px 13px;
 }
@@ -190,16 +189,18 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 .glowText
 {
   -webkit-animation-direction: alternate;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-name: glowText;
 }
 @-webkit-keyframes glowText
 {
   0% {
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px rgba(255,255,255, .5);
+  } 50% {
+    text-shadow: 0 0 2px rgba(255, 241, 0, 1);
   } 100% {
-    text-shadow: 0 0 2px rgba(255, 241, 0, .5);
+    text-shadow: 0 0 2px rgba(255,255,255, .5);
   }
 }
 
@@ -239,18 +240,18 @@ img.pageCurl
 {
   display: block;
   float: left;
-  position: relative;
-  top: 20px; left: 15px;
+  position: absolute;
+  top: 10px; left: 30px;
   text-indent: -9999px;
-  width: 180px; height: 40px;
-  background: url(../img/augmo-title-logo-360.png) no-repeat;
-  -webkit-background-size: 180px 40px;
+  width: 250px; height: 55.5px;
+  background: url(../img/augmo-title-logo.png) no-repeat;
+  -webkit-background-size: 250px 55.5px;
 }
 
 #contact
 {
   position: absolute;
-  top: 20px; right: 15px;
+  top: 20px; right: 30px;
   float: right;
 }
 
@@ -374,6 +375,7 @@ img.pageCurl
   padding: 10px;
   -webkit-box-shadow: 0 1px 1px #fff, inset 0 1px 5px rgba(0, 0, 0, .2);
 }
+#details-wrap section.wrap {width: 280px;}
 
 #poster
 {
@@ -386,14 +388,14 @@ img.pageCurl
 {
   font-family: Verdana;
   font-weight: bold;
-  font-size: 2em;
-  margin-bottom: .5em;
+  font-size: 2.2em;
+  margin-bottom: 4px;
 }
 #event-theme
 {
   display: block;
   position: relative;
-  left: 2em;
+  left: 25px;
   text-indent: -9999px;
   width: 200px; height: 42px;
   background: url(../img/augmo-theme.png) no-repeat;
@@ -414,7 +416,7 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
   width: 16%;
   position: relative;
   float: right;
-  right: 10px; top: 2px;
+  right: -8px; top: 2px;
 }
 #remove-button a
 {
@@ -460,7 +462,7 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
   position: absolute;
   left: 10px; top: 12px;
   overflow: hidden;
-  width: 32px;
+  width: 32px; height: 32px;
   border: 1px solid white;
   -webkit-border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
@@ -620,9 +622,26 @@ input[type=password]:focus
     width: 300px;
   }
   
+  #logo
+  {
+    background: url(../img/bg-header-640.jpg) no-repeat;
+    -webkit-background-size: 320px 80px;
+  }
   #logo-image
   {
-    width: 190px; height: 80px;
+    top: 17.5px; left: 10px;
+    width: 200px; height: 44.4px;
+    -webkit-background-size: 200px 44.4px;
+  }
+  #contact
+  {
+    position: absolute;
+    top: 20px; right: 15px;
+    float: right;
+  }
+  #contact li
+  {
+    margin-right: 15px;
   }
   
   #poster { display: none; }
@@ -634,9 +653,4 @@ input[type=password]:focus
   #entry-form input:not([type="radio"]):not([type="checkbox"]), #entry-form select {width: 126px;}
   #entry-form .history.checkbox, #entry-form #reason {margin-left: 11em;}
 
-  #logo
-  {
-    background: url(../img/bg-header-640.jpg) no-repeat;
-    -webkit-background-size: 320px 80px;
-  }
 }
