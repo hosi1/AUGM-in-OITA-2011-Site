@@ -58,7 +58,7 @@
         <ul class="rList">
           <li id="event-calendar" class="listArrow"><a href="webcal://appling.sakura.ne.jp/Sites/augmo2011/global/event.ics">イベントをカレンダーに追加</a></li>
           <!-- 受付終了時には「finish」class属性値を加え、href属性を削除するか「#」href属性値に置き換えてください -->
-          <li class="listArrow finish"><a id="entry-button" href="#">事前参加登録申込</a></li>
+          <li class="listArrow"><a id="entry-button" href="#">事前参加登録申込</a></li>
         </ul>
       </div><!-- #event.section -->
 
@@ -87,13 +87,13 @@
 
       <div id="shortmovie" class="section">
         <div class="grBox">
-          <h1 class="shortmovie-title section-title">九州ユーザーグループ対抗<br />ショートムービーフェスティバル</h1>
+          <h1 class="shortmovie-title section-title">九州ユーザーグループ対抗<br />ショートムービー<br />フェスティバル</h1>
         </div>
         <div id="shortmovie-info" class="rBox">
           <p>九州内各ユーザーグループが制作したショートムービー作品を持ち寄ってイベント当日に上映を行い、参加ゲストの投票でショートムービー大賞を決める企画です。</p>
         </div>
         <ul class="rList">
-          <li class="listArrow"><a>結果発表</a></li>
+          <li class="listArrow unpublished"><a>結果発表</a></li>
         </ul>
       </div><!-- #shortmovie -->
     
@@ -176,17 +176,18 @@
           <li class="listArrow"><a href="http://dai1.com/aug/Nagasaki/Welcome.html">長崎アップルユーザグループ</a></li>
           <li class="listArrow"><a href="http://www.miyazakiappleclub.com/">Miyazaki Apple Club</a></li>
           <li class="listArrow"><a href="http://www.fm-kyushu.jp/">ファイルメーカーPro 九州ユーザーズミーティング</a></li>
+          <li class="listArrow"><a href="http://homepage.mac.com/haisai/mac/">HaiSaiMac</a></li>
           <li class="listArrow"><a href="http://www.tcp-net.ad.jp/danbo/">MACお宝鑑定団</a></li>
         </ul>        
       </div><!-- #usergroups -->
 
 
-      <div id="supporter-list" class="section">
+      <div id="supporter" class="section">
         <div class="grBox">
           <h1 class="supporter-title section-title">協賛および後援</h1>
         </div>
         <ul class="rList">
-          <li class="listArrow"><a>有限会社青い空 マックメモリー専門店マックメム</a></li>
+          <li class="listArrow"><a id="supporter-button" href="#">リストを表示</a></li>
         </ul>
       </div><!-- #supporter-list -->
     
@@ -433,9 +434,9 @@
     <li>
       <span>
         <label for="contents10">Mac歴<span class="star-mark">＊</span></label>
-        <input type="text" id="contents10" name="contents10" placeholder="使用年数(半角数字)" />
+        <input type="tel" id="contents10" name="contents10" placeholder="使用年数（半角数字）" />
       </span>
-      <span class="note">Macをお使いでない方は「-（半角マイナス記号）」とご記入ください。</span>
+      <span class="note">Macをお使いでない方は「0（半角数字ゼロ）」とご記入ください。</span>
     </li>
     <li class="clr">
       <span>
@@ -469,7 +470,7 @@
     <li>
       <span>
         <label for="contents14">コメント</label>
-        <textarea id="contents14" name="contents14" class="textarea" cols="" rows=""></textarea>
+        <textarea id="contents14" name="contents14" class="textarea" cols="25" rows="3"></textarea>
       </span>
     </li>
     <li>
@@ -484,12 +485,63 @@
     </li>
     <li class="bottom"></li>
   </ul>
-  <fieldset class="button-field">
+  <div class="button-field">
     <button class="submitButton" type="submit" value="内容を確認">内容を確認</button>
     <button class="resetButton" type="reset" value="リセット">リセット</button>
-  </fieldset>
+  </div>
 </form>
       </div><!-- #entry-form -->
+      
+      <div id="supporter-list" class="section">
+        <span id="close_x" class="close sprited"></span>
+        <ul>
+      		<li><a href="http://www.apple.com/jp/">アップルジャパン株式会社（後援）</a></li>
+      		<li><a href="http://www.igeekinc.com/">アイギーク株式会社</a></li>
+      		<li><a href="http://www.macmem.com/">有限会社青い空 マックメモリー専門店マックメム</a></li>
+      		<li><a href="http://www.act2.com/">株式会社アクト・ツー</a></li>
+      		<li><a href="http://poken.jp/ja/">アコニ株式会社</a></li>
+      		<li><a href="http://www.adobe.com/jp/">アドビシステムズ株式会社</a></li>
+      		<li><a href="http://www.e-frontier.co.jp/">株式会社イーフロンティア</a></li>
+      		<li><a href="http://www.intel.co.jp/">インテル株式会社</a></li>
+      		<li><a href="http://www.infinisys.co.jp/">株式会社インフィニシス</a></li>
+      		<li><a href="http://www.cut-and-paste.jp/">有限会社 Cut &#38; Paste</a></li>
+      		<li><a href="http://www.quark.co.jp/">クォークジャパン株式会社</a></li>
+      		<li><a href="http://www.covia.net/">株式会社コヴィア・ネットワークス</a></li>
+      		<li><a href="http://www.sun-denshi.co.jp/">サン電子株式会社</a></li>
+      		<li><a href="http://www.sanyo-dsc.com/">三洋電機株式会社</a></li>
+      		<li><a href="http://www.sanwa.co.jp/">サンワサプライ株式会社</a></li>
+      		<li><a href="http://www.sigma-apo.co.jp/">シグマA・P・Oシステム販売株式会社</a></li>
+      		<li><a href="http://www.sixapart.jp/">シックス・アパート株式会社</a></li>
+      		<li><a href="http://www.synnex.co.jp/">株式会社シネックス</a></li>
+      		<li><a href="http://www.junglejapan.com/">株式会社ジャングル</a></li>
+      		<li><a href="http://www.skype.com/intl/ja/">Skype Communications S.A.</a></li>
+      		<li><a href="http://www.celsys.co.jp/">株式会社セルシス</a></li>
+      		<li><a href="http://www.sonicjapan.co.jp/">ソニック・ソルーションズ株式会社</a></li>
+      		<li><a href="http://www.swtoo.com/">株式会社ソフトウェア・トゥー</a></li>
+      		<li><a href="http://www.diatec.co.jp/">ダイヤテック株式会社</a></li>
+      		<li><a href="http://www.mathey.jp/">株式会社デンノー</a></li>
+      		<li><a href="http://www.trinity.jp/">トリニティ株式会社</a></li>
+      		<li><a href="http://jp.trendmicro.com/jp/home/">トレンドマイクロ株式会社</a></li>
+      		<li><a href="http://www.netjapan.co.jp/">株式会社ネットジャパン</a></li>
+      		<li><a href="http://www.pawasapo.co.jp/">株式会社パワーサポート</a></li>
+      		<li><a href="http://www.focal.co.jp/">フォーカルポイントコンピュータ株式会社</a></li>
+      		<li><a href="http://www.planex.co.jp/">プラネックスコミュニケーションズ株式会社</a></li>
+      		<li><a href="http://www.fli.co.jp/">株式会社フロントライン</a></li>
+      		<li><a href="http://www.microsoft.com/japan/mac/default.mspx">マイクロソフト株式会社</a></li>
+      		<li><a href="http://www.micro-solution.com/">株式会社マイクロソリューション</a></li>
+      		<li><a href="http://www.magnolia.co.jp/">株式会社マグノリア</a></li>
+      		<li><a href="http://www.mediaplanet.jp/">MEDIAPLANET 株式会社</a></li>
+      		<li><a href="http://www.moshi-shop.jp/">米aevoe．moshiアジア営業部</a></li>
+      		<li><a href="http://mozilla.jp/">Mozilla Japan</a></li>
+      		<li><a href="http://www.monokakido.jp/">株式会社物書堂</a></li>
+      		<li><a href="http://www.morisawa.co.jp/">株式会社モリサワ</a></li>
+      		<li><a href="http://www.yahoo.co.jp/">ヤフー株式会社</a></li>
+      		<li><a href="http://yamagame.secret.jp/">株式会社やまがめ</a></li>
+      		<li><a href="http://www.runexy.co.jp/">株式会社ラネクシー</a></li>
+      		<li><a href="http://www.logicool.co.jp/">株式会社ロジクール</a></li>
+      		<li><a href="http://www.wondershare.jp/">ワンダーシェアージャパン株式会社</a></li>
+        </ul>
+      </div><!-- #supporter-list -->
 
 
   </div><!-- #content -->

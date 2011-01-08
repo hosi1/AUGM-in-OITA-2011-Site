@@ -125,27 +125,36 @@
 /* Box style */
 .rBox
 {
+  position: relative;
   padding: 10px 12px;
   background-color: white;
   border: 1px solid #ababab;
   -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
 }
 .grBox
 {
+  position: relative;
   padding: 8px 16px;
   background-color: #e3e6e9;
-  background-image: -webkit-gradient (liner, left top, left bottom, from(#e5e8eb), to(#e3e6e9));
+  background: -webkit-gradient (linear, left top, left bottom, from(#e5e8eb), to(#e3e6e9));
+  background: -moz-linear-gradient (#e5e8eb, #e3e6e9);
+  background: linear-gradient (#e5e8eb, #e3e6e9);
   border: 1px solid #ababab;
-  -webkit-border-radius: 7px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
   -webkit-box-shadow: inset 0 1px 1px white;
+  -moz-box-shadow: inset 0 1px 1px white;
+  box-shadow: inset 0 1px 1px white;
 }
 .grBox + .rBox
 {
   border-top: 0;
-  -webkit-border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  border-radius: 0 0 7px 7px;
 }
 
 .rList
@@ -154,6 +163,8 @@
   background-color: white;
   border: 1px solid #ababab;
   -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
 }
 .rList li
 {
@@ -170,13 +181,15 @@
 .rList li:first-child
 {
   border-top: 0;
-  -webkit-border-top-left-radius: 7px;
-  -webkit-border-top-right-radius: 7px;
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
 }
 .rList li:last-child
 {
-  -webkit-border-bottom-left-radius: 7px;
-  -webkit-border-bottom-right-radius: 7px;
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  border-radius: 0 0 7px 7px;
 }
 .rList li a
 {
@@ -193,8 +206,21 @@
 .grBox + .rList, .grBox + .rList li:first-child
 {
   border-top: 0;
-  -webkit-border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  border-radius: 0 0 7px 7px;
+}
+#shortmovie > .rBox
+{
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+#shortmovie > .rBox + ul.rList
+{
+  border-top: 0;
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  border-radius: 0 0 7px 7px;
 }
 
 .listArrow
@@ -210,8 +236,12 @@
   background-color: #fff;
   border: 1px solid #878787;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   padding: 10px;
   -webkit-box-shadow: 0 1px 1px #fff, inset 0 1px 5px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 1px #fff, inset 0 1px 5px rgba(0, 0, 0, .2);
+  box-shadow:  0 1px 1px #fff, inset 0 1px 5px rgba(0, 0, 0, .2);
 }
 
 .sprited {
@@ -219,37 +249,6 @@
   line-height: 1000px;
   overflow: hidden;
   display: block;
-}
-
-.glowList
-{
-  -webkit-animation-direction: alternate;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: glowList;
-}
-@-webkit-keyframes glowList
-{
-  0% {
-    background-color: white;
-  } 100% {
-    -webkit-box-shadow: inset 0 2px 5px rgba(248, 182, 38, .5);
-  }
-}
-.glowText
-{
-  -webkit-animation-direction: alternate;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: glowText;
-}
-@-webkit-keyframes glowText
-{
-  0% {
-    text-shadow: 0 0 2px white;
-  } 100% {
-    text-shadow: 0 0 2px rgba(255, 241, 0, .5);
-  }
 }
 
 #info-group
@@ -302,6 +301,28 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
   margin-left: -5em;
   border: 0;
   -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  vertical-align: middle;
+  padding: 4px;
+}
+.unpublished:after
+{
+  display: block;
+  content: '公開は開催日に！';
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top: 15%; left: 50%;
+  width: 10em;
+  color: white;
+  font-size: 123.1%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: -5em;
+  border: 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   vertical-align: middle;
   padding: 4px;
 }
@@ -314,6 +335,8 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
   position: relative;
 	background: #fff url(../img/bg-header-1024.jpg) no-repeat;
   -webkit-box-shadow: inset 0 -2px 10px rgba(0, 0, 0, .2);
+  -moz-box-shadow: inset 0 -2px 10px rgba(0, 0, 0, .2);
+  box-shadow: inset 0 -2px 10px rgba(0, 0, 0, .2);
   width: 100%;
   height: 150px;
 }
@@ -362,6 +385,16 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
   font-weight: bold;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0,0,0,.5);
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all  0.3s linear;
+}
+#contact li a:hover
+{
+  color: rgba(255, 241, 0, .8);
+  text-decoration: none;
+  text-shadow: 0 0 3px white;
 }
 
 #twitter
@@ -379,6 +412,7 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
 /* Main Content */
 #main > * > .section {margin-bottom: 20px;}
 #main > * > .section:last-child {margin-bottom: 0 !important;}
+
 
 /* Site Content */
 div:target
@@ -416,7 +450,11 @@ div:target
   width: 32px; height: 32px;
   border: 1px solid white;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
 }
 .thumb img {opacity: 0;}
 #guest a
@@ -472,7 +510,7 @@ div:target
 }
 
 /* Entry Page layout */
-#entry-form
+#entry-form, #supporter-list
 {
   display: none;
   clear: both;
@@ -481,7 +519,11 @@ div:target
   background: white url(../img/stripes-type-b.png);
   border: 0;
   -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
   -webkit-box-shadow: 0 0 10px rgba(255,255,255, .5);
+  -moz-box-shadow: 0 0 10px rgba(255,255,255, .5);
+  box-shadow: 0 0 10px rgba(255,255,255, .5);
   padding: 30px;
 }
 #evaluation-form, #entry-info
@@ -522,7 +564,11 @@ div:target
   background-color: white;
   border: 0;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
   margin: 12px 8px 4px;
   padding: 6px 8px;
 }
@@ -531,7 +577,11 @@ div:target
   background-color: #f1f7fe;
   border: 1px solid #8f9aa7;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
   margin-bottom: 20px;
 }
 #entry-form ul.section li
@@ -582,6 +632,8 @@ div:target
   color: white;
   border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-appearance: none;
 }
 #entry-form button[type="reset"]
@@ -608,6 +660,40 @@ input[type=password]:focus
   outline: 0 none;
 }
 
+#supporter-list {padding-bottom: 22px;}
+#supporter-list li
+{
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  border: 1px solid #d5d5d5;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+#supporter-list li a
+{
+  display: block;
+  color: #1b1310;
+  text-decoration: none;
+  margin: -8px;
+  padding: 8px;
+}
+#supporter-list li:hover
+{
+  border-color: white;
+  background-color: rgba(203, 234, 210, .5);
+  -webkit-box-shadow: 0 0 3px white;
+  -moz-box-shadow: 0 0 3px white;
+  box-shadow: 0 0 3px white;
+}
+
 @media only screen and (orientation:portrait){
 
   #contact {right: 30px;}
@@ -624,12 +710,17 @@ input[type=password]:focus
   
   #entry-form
   {
-    width: 405px;
+    width: 402px;
   }
   #evaluation-form
   {
     clear: right;
     float: left;
+  }
+  
+  #supporter-list
+  {
+    width: 600px;
   }
 }
 

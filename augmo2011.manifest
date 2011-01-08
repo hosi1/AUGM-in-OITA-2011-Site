@@ -1,11 +1,27 @@
 CACHE MANIFEST
-# Rev: 20110104_1
+# Rev: 20110106_1
 
 # HTML
 index.html
 
 # CSS
+global/css/Style.css
 
 # JS
+global/js/jquery.lightbox_me.js
+global/js/augmo2011.js
 
 # IMAGE
+global/img/arrow.png
+global/img/augmo-theme.png
+global/img/augmo-title-logo.png
+global/img/augmo2011-poster.png
+global/img/bg-body.gif
+global/img/bg-header-768.jpg
+global/img/bg-header-1024.jpg
+global/img/chevron.png
+global/img/envelope.png
+global/img/frame.png
+global/img/sprited.png
+global/img/stripes-type-b.png
+global/img/twitter-bird.png

@@ -109,18 +109,15 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 {
   padding: 8px 16px;
   background-color: #e3e6e9;
-  background-image: -webkit-gradient (liner, left top, left bottom, from(#e5e8eb), to(#e3e6e9));
+  background-image: -webkit-gradient (linear, left top, left bottom, from(#e5e8eb), to(#e3e6e9));
   border: 1px solid #ababab;
-  -webkit-border-radius: 7px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-radius: 7px 7px 0 0;
   -webkit-box-shadow: inset 0 1px 1px white;
 }
 .grBox + .rBox
 {
   border-top: 0;
-  -webkit-border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
+  -webkit-border-radius: 0 0 7px 7px;
 }
 
 .rList
@@ -139,13 +136,11 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 .rList li:first-child
 {
   border-top: 0;
-  -webkit-border-top-left-radius: 7px;
-  -webkit-border-top-right-radius: 7px;
+  -webkit-border-radius: 7px 7px 0 0;
 }
 .rList li:last-child
 {
-  -webkit-border-bottom-left-radius: 7px;
-  -webkit-border-bottom-right-radius: 7px;
+  -webkit-border-radius: 0 0 7px 7px;
 }
 .rList li a
 {
@@ -161,8 +156,7 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 .grBox + .rList, .grBox + .rList li:first-child
 {
   border-top: 0;
-  -webkit-border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
+  -webkit-border-radius: 0 0 7px 7px;
 }
 
 .listArrow
@@ -171,21 +165,6 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
   -webkit-background-size: 18px 13px;
 }
 
-.glowList
-{
-  -webkit-animation-direction: alternate;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: glowList;
-}
-@-webkit-keyframes glowList
-{
-  0% {
-    background-color: white;
-  } 100% {
-    -webkit-box-shadow: inset 0 2px 5px rgba(248, 182, 38, .5);
-  }
-}
 .glowText
 {
   -webkit-animation-direction: alternate;
@@ -197,10 +176,8 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 {
   0% {
     text-shadow: 0 0 2px rgba(255,255,255, .5);
-  } 50% {
-    text-shadow: 0 0 2px rgba(255, 241, 0, 1);
   } 100% {
-    text-shadow: 0 0 2px rgba(255,255,255, .5);
+    text-shadow: 0 0 2px rgba(255, 241, 0, .8);
   }
 }
 
@@ -290,34 +267,31 @@ img.pageCurl
 
 #global-nav {clear: both; padding:16px 10px;}
 #global-nav a {
- color: #9e0728;
- padding: 10px 0;
- display: block;
- text-transform: uppercase;
- font-weight: bold;
- font-size: 1.2em;
- text-align: center;
- border-right: 1px solid #d5d5d5;
+  color: #9e0728;
+  padding: 10px 0;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  border-right: 1px solid #d5d5d5;
 }
 #global-nav li:last-child a { border: 0; }
 
 #nav-menu { 
- list-style: none;
- background: #fff;
- border: 1px solid #d5d5d5;
- -moz-border-radius: 7px;
- -webkit-border-radius: 7px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #d5d5d5;
+  -webkit-border-radius: 7px;
 }
 #nav-menu li:first-child, #nav-menu li:last-child { width: 21%; }
 #nav-menu li:first-child
 {
-  -webkit-border-top-left-radius: 7px;
-  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-radius: 7px 0 0 7px;
 }
 #nav-menu li:last-child
 {
-  -webkit-border-top-right-radius: 7px;
-  -webkit-border-bottom-right-radius: 7px;
+  -webkit-border-radius: 0 7px 7px 0;
 }
 
 #nav-menu li:nth-child(3) { width: 30%; }
@@ -435,6 +409,24 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
 {
   display: block;
   content: '受付は終了しました';
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top: 15%; left: 50%;
+  width: 10em;
+  color: white;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: -5em;
+  border: 0;
+  -webkit-border-radius: 20px;
+  vertical-align: middle;
+  padding: 4px;
+}
+.unpublished:after
+{
+  display: block;
+  content: '公開は開催日に！';
   background-color: rgba(0,0,0,.5);
   position: absolute;
   top: 15%; left: 50%;
