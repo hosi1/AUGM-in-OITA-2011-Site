@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Rev: 20101229_1
+# Rev: 20110110_1
 
 # HTML
 index.html
@@ -18,12 +18,19 @@ global/css/iPhone-Style.css
 global/js/augm.js
 
 # IMAGE
+global/img/augmo-theme.png
+global/img/augmo-title-logo.png
 global/img/bg-header-640.jpg
 global/img/bg-header-960.jpg
-global/img/iphone-poster.png
-global/img/augmo-title-logo.png
-global/img/hi-arrow.png
 global/img/envelope-brown.png
-global/img/twitter-bird-brown.png
 global/img/frame.png
+global/img/hi-arrow.png
+global/img/iphone-poster.png
 global/img/stripes-type-b.png
+global/img/stripes.png
+global/img/twitter-bird-brown.png
+
+event/panelist/guest-icons/lix-adobe.jpg
+event/panelist/guest-icons/lix-nobi.jpg
+
+help/img/remove-event.png

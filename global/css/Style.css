@@ -3,6 +3,16 @@
 @import url(reset.css);
 @import url(typo.css);
 
+/*============================================================
+@prefix : <http://purl.org/net/ns/doas#> .
+<> a :CSSStylesheet;
+  :title "Style.css";
+  :shortdesc "AUGM in OITA 2011 Theme for PC";
+  :created "2010-11-30";
+  :release [:revision "1.0"; :created "2011-01-10"];
+  :author [:name "Kouji Tsuru"] .
+==============================================================*/
+
 /* Font Size
 *     77% = 10px	|	123.1% = 16px	|	167% = 22px	
 *     85% = 11px	|	  131% = 17px	|	174% = 23px
@@ -12,6 +22,13 @@
 *    116% = 15px	|	161.6% = 21px	|
 */
 
+* {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 /* Landscape mode (default) */
 #wrap {
 	margin:0 auto;
@@ -20,7 +37,6 @@
 	overflow:hidden;
 	text-align:left;
 	background:#fff;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 #header {
 	float:left;
@@ -348,9 +364,8 @@ dl#event-details dd:last-child, dl#social-details dd:last-child {margin-bottom: 
   position: absolute;
   top: 20px; left: 30px;
   text-indent: -9999px;
-  width: 452px; height: 100px;
+  width: 250px; height: 55px;
   background: url(../img/augmo-title-logo.png) no-repeat;
-  -webkit-background-size: 250px 55.3px;
 }
 #logo-theme
 {
@@ -701,7 +716,8 @@ input[type=password]:focus
   #logo-title
   {
     top: 10px;
-    -webkit-background-size: 200px 44.2px;
+    width: 200px; height: 44px;
+    background-image: url(../img/augmo-title-logo-port.png);
   }
   #logo-theme
   {

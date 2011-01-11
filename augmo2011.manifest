@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Rev: 20110106_1
+# Rev: 20110110_1
 
 # HTML
 index.html
@@ -14,6 +14,7 @@ global/js/augmo2011.js
 # IMAGE
 global/img/arrow.png
 global/img/augmo-theme.png
+global/img/augmo-title-logo-port.png
 global/img/augmo-title-logo.png
 global/img/augmo2011-poster.png
 global/img/bg-body.gif

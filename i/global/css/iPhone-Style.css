@@ -1,6 +1,16 @@
 @charset "utf-8";
 @import url(iOS-reset.css);
 
+/*============================================================
+@prefix : <http://purl.org/net/ns/doas#> .
+<> a :CSSStylesheet;
+  :title "iPhone-Style.css";
+  :shortdesc "AUGM in OITA 2011 Theme for iPhone";
+  :created "2010-11-30";
+  :release [:revision "1.0"; :created "2011-01-10"];
+  :author [:name "Kouji Tsuru"] .
+==============================================================*/
+
 /* Color List 
     border line:        #ababab rgb(171, 171, 171)
     border line light:  #d5d5d5 rgb(213, 213, 213)
@@ -23,7 +33,6 @@
   position: relative;
   overflow: hidden;
 	text-align:left;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 header
 {
@@ -50,7 +59,7 @@ footer
   width: 480px;
 }
 
-/* section bottom none */
+/* section margin bottom */
 #main > section {margin-bottom: 20px;}
 #main > section:last-child {margin-bottom: 0 !important;}
 
@@ -94,8 +103,6 @@ input[type="radio"], input[type="checkbox"] {vertical-align: middle;}
 	clear: both;
 	height: 0;
 	}
-* html .clr             { zoom: 1; } /* IE6 */
-*:first-child+html .clr { zoom: 1; } /* IE7 */
 
 /* Box style */
 .rBox
