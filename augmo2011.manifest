@@ -8,6 +8,7 @@ index.html
 global/css/Style.css
 
 # JS
+global/js/jquery.js
 global/js/jquery.lightbox_me.js
 global/js/augmo2011.js
 
