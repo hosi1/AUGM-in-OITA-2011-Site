@@ -285,6 +285,8 @@ body
   background: url(../img/bg-body.gif);
 }
 
+#noie6alert {z-index: 100;}
+
 p {line-height: 1.5;}
 p.copyright {line-height: 1; text-align: center;}
 .section-title
