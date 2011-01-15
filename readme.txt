@@ -6,6 +6,9 @@ Features: iPhone Support, iPad Support, HTML5, CSS3
 Tags: augm, theme, 2011
 
 
+htaccess
+  - 転送先を適当なパスに書き換えてください。
+
 
 マニフェストファイル
   - ファイルに変更を加えた場合は、マニフェストファイル2行目を書き換えてアップロードしてください。
